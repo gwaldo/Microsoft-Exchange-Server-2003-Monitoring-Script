@@ -1,0 +1,15 @@
+Monitor the status of the Exchange Servers and email (if possible) if any problems are discovered.  Checking: 
+
+- Pingable, 
+- Exchange Services Running, 
+- Connector Status, 
+- DataStores Mounted, 
+- Transaction Log Drives more than 50% free. 
+
+On Lines 32-39, Modify the array of servers to use your actual Exchange server Names (Virtual names are best).  
+
+On line 172, you need to get the container name for your LDAP environment.  Note that this is in the lesser-known Configuration Container.  It's most easily accessed by AD Explorer or ADSI Edit.
+
+The Function "fnEmail()" (lines 249-271) will likewise need to be modified for your environment.
+
+I have this running in production every 5 minutes as a scheduled task on a management server, but could be modified to output to a text file, console window, or feed a web-form.
