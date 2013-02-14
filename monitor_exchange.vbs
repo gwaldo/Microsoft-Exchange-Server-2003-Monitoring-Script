@@ -27,6 +27,9 @@
 ' SysInternals team 
 ' ================================================================================================== 
 ' ================================================================================================== 
+
+' TODO:
+'     -Add Check for CDOEXM object creation (requires Exchange Admin Tools to be installed)
  
 'VBScript uses 0-indexed arrays, so the arrServers is (n-1) 
 dim arrServers(5)            ' Array to hold the computers to check 
