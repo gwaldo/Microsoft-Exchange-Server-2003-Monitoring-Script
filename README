@@ -6,6 +6,8 @@ Monitor the status of the Exchange Servers and email (if possible) if any proble
 - DataStores Mounted, 
 - Transaction Log Drives more than 50% free. 
 
+You must have the Exchange Admin Tools installed to have access to the CDOEXM object
+
 On Lines 32-39, Modify the array of servers to use your actual Exchange server Names (Virtual names are best).  
 
 On line 172, you need to get the container name for your LDAP environment.  Note that this is in the lesser-known Configuration Container.  It's most easily accessed by AD Explorer or ADSI Edit.
