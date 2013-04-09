@@ -234,14 +234,23 @@ For each strComputer in arrServers
 Next 
  
 ' Were any problems reported? 
-if (len(alertMessage) > 0) then 
+if (len(alertMessage) > 0) then
     alertMessage = "The following problems have been reported:" & VbCrLf _ 
         & VbCrLf & alertMessage 
 '    wscript.echo alertMessage        'testing message 
     fnEmail() 
 else 
 '    WScript.Echo "No issues"        'testing message 
-end if 
+end if
+
+' In order to allow this to be called as an external application and provide a return code...
+dim returnCode
+if (len(alertMessage) > 0) then
+	returnCode = 1
+else
+	returnCode = 0
+end if
+WScript.Quit(returnCode)
  
  
 '=============================================================================== 
